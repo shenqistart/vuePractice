@@ -15,6 +15,11 @@ export default [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
+    path: '/store',
+    name: 'store',
+    component: () => import('../views/store.vue')
+  },
+  {
     path: '/split-pane',
     name: 'split_pane',
     meta: {

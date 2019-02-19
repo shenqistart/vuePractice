@@ -2,11 +2,13 @@
   <div>
     <a-input v-model="inputValue"></a-input>
     <a-input :value="inputValue" @input="handleInput"></a-input>
+    <a-show :content="inputValue"></a-show>
     <p>{{inputValue}}</p>
   </div>
 </template>
 <script>
 import AInput from "../components/AInput";
+import AShow from "../components/AShow"; //平行兄弟组件
 export default {
   name: "store",
   data() {
@@ -15,7 +17,8 @@ export default {
     };
   },
   components: {
-    AInput
+    AInput,
+    AShow
   },
   methods: {
     // input为方法传递的值
